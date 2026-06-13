@@ -1,3 +1,4 @@
+//Insert a element in bottom position of stack.
 #include<iostream>
 #include<stack>
 using namespace std;
