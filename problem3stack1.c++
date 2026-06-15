@@ -1,4 +1,4 @@
-#include<iostream>
+ #include<iostream>
 #include<stack>
 #include<vector>
 
@@ -49,8 +49,6 @@ int main()
         temp.pop();
     }
 
-    for(int x : ans)
-        cout << x << " ";
 
     cout << endl;
 
