@@ -4,7 +4,9 @@
 #include<string>
 using namespace std;
 int main(){
-    string s="ab#c";
+    string s;
+    cout<<"enter your first string:";
+    cin>>s;
     stack <char> st;
     for(int i=0;i<s.length();i++){
         if(s[i]!='#'){
@@ -16,7 +18,9 @@ int main(){
         }
         
     }
-     string t="ad#ṇ";
+     string t;
+     cout<<"enter your second string:";
+     cin>>t;
     stack <char> at;
     for(int i=0;i<t.length();i++){
         if(s[i]!='#'){
