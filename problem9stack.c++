@@ -1,4 +1,4 @@
-//Next greater element problem
+//Next greater element problem solve wityh c++.
 
 #include<iostream>
 #include<vector>
