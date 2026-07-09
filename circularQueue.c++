@@ -22,7 +22,7 @@ public:
 
     bool isfull()
     {
-        return rear == size - 1;
+        return (rear+1)%size==front;
     }
 
     void push(int x)
@@ -62,7 +62,7 @@ public:
         }
         else
         {
-            front++;
+            front=(front+1)%size;
         }
     }
 
@@ -81,14 +81,14 @@ public:
 int main()
 {
     queue q(5);
-  q.push(5);
+
+    q.push(5);
     q.push(10);
     q.push(15);
     q.push(25);
     q.push(30);
     q.pop();
     q.push(85);
-
     cout<<"Front element = "<<q.start()<<endl;
 
     return 0;
