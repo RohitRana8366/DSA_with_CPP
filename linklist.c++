@@ -27,9 +27,21 @@ public:
             head = tail = newNode;
             return;
         }
-
         newNode->next = head;
         head = newNode;
+    }
+    void push_back(int value){
+        Node* newnode=new Node(value);
+        if (head==NULL)
+        {
+            head=tail= newnode;
+        }
+        else{
+            tail->next=newnode;
+            tail=newnode;
+        }
+        
+
     }
     void printll(){
         Node*temp=head;
@@ -48,7 +60,8 @@ int main(){
     list ll;
     ll.push_front(1); 
     ll.push_front(2); 
-    ll.push_front(3); 
+    ll.push_front(3);
+    ll.push_back(8) ;
     ll.printll();
     
     
