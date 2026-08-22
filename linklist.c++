@@ -50,10 +50,63 @@ public:
             cout<<temp->data<<" ";
             temp=temp->next;
 
+        }}
+    void pop_front(){
+        if (head==NULL)
+        {
+            return;
         }
+        else{
+        
+        Node*temp=head;
+        head=head->next;
+        temp->next=NULL;
+        delete temp;
+
+    }
+}
+    void pop_back(){
+        Node*temp=head;
+        while (temp->next!=tail)
+        {
+            temp=temp->next;
+        }
+        temp->next=NULL;
+        delete tail;
+        tail=temp;
+        
+    }
+
+    void insert_middle(int value,int position)
+    {
+        if (position<0)
+        {
+            cout<<"invalid position";
+            return;
+        }
+        if (position==0)
+        {
+            push_front(value);
+            return ;
+        }
+        Node*temp=head;
+        for (int i = 0; i < position-1; i++)
+        {
+            temp=temp->next;
+        }
+
+        Node*newNode=new Node(value);
+        newNode->next=temp->next;
+        temp->next=newNode;
+
+
+        
         
         
     }
+        
+        
+    
 };
 
 int main(){
@@ -62,6 +115,18 @@ int main(){
     ll.push_front(2); 
     ll.push_front(3);
     ll.push_back(8) ;
+
+    ll.printll();
+
+    cout<<" \n";
+    ll.pop_front();
+    ll.printll();
+
+    cout<<"\n";
+    ll.pop_back();
+    ll.printll();
+    cout<<"\n"; 
+    ll.insert_middle(10, 1);
     ll.printll();
     
     
