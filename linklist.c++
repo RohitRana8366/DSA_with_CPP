@@ -98,10 +98,22 @@ public:
         Node*newNode=new Node(value);
         newNode->next=temp->next;
         temp->next=newNode;
+    }
 
+    int search(int key){
+        Node*temp=head;
+        int idx=0;
+        while (temp!=NULL)
+        {
+            if (temp->data==key)
+            {
+                return idx;
+            }
+            temp=temp->next;
+            idx++;
+        }
+        return -1;
 
-        
-        
         
     }
         
@@ -128,7 +140,8 @@ int main(){
     cout<<"\n"; 
     ll.insert_middle(10, 1);
     ll.printll();
-    
+     cout<<"\n";
+    cout<< ll.search(10)<<endl;
     
     return 0;
 }
